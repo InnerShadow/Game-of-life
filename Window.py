@@ -39,7 +39,6 @@ class Window(QMainWindow):
         for i in range(shape[0]):
             for j in range(shape[1]):
                 if self.greed.Matrix[i, j].isAlive :
-                    print(i * 10, j * 10, (i + 1) * 10, (j + 1) * 10)
                     painter.drawRect(i * 10, j * 10, 10, 10)
         
         painter.setPen(QtCore.Qt.black)

@@ -1,5 +1,4 @@
 
-from PyQt5 import QtGui
 from PyQt5.QtWidgets import *
 import sys
 
@@ -19,13 +18,6 @@ def __main__() :
     App = QApplication(sys.argv)
     window = Window.Window(_greed)
     sys.exit(App.exec())
-
-    
-    #init(window, nrow, ncol, _greed.Matrix)
-
-    #window.getMouse()
-
-    #window.close()
 
 if __name__ == '__main__':
     __main__()
