@@ -23,7 +23,7 @@ class Window(QMainWindow):
     def go(self):
         self.update()
         QApplication.processEvents()
-        QThread.msleep(150)
+        QThread.msleep(10)
         self.greed.doLive()
 
     def InitWindow(self):

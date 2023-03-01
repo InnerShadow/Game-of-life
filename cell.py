@@ -4,7 +4,7 @@ from random import randint
 class Cell :
 
     def doRandom(self) :
-        sighn = randint(0, 8)
+        sighn = randint(0, 5)
         if sighn != 0 :
             self.isAlive = False
         else :

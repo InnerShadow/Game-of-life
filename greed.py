@@ -28,8 +28,7 @@ class Greed :
             if self.Matrix[i + 1][j - 1].isAlive : neighbours += 1
         
         if j != self.nrow - 1:
-            if self.Matrix[i][j + 1].isAlive : 
-                neighbours += 1
+            if self.Matrix[i][j + 1].isAlive : neighbours += 1
         
         if j != 0 :
             if self.Matrix[i][j - 1].isAlive : neighbours += 1

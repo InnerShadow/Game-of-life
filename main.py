@@ -6,8 +6,6 @@ import numpy as np
 import greed
 import Window
 
-import cell
-
 def __main__() :
 
     ncol = 90
