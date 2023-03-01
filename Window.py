@@ -2,7 +2,7 @@
 from PyQt5 import QtGui, QtWidgets, QtCore
 from PyQt5.QtGui import QPainter, QBrush, QPen
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QTimer, QThread
 import sys
 
 import greed
@@ -19,6 +19,12 @@ class Window(QMainWindow):
         self.width = 900
         self.height = 600
         self.InitWindow()
+
+    def go(self):
+        self.update()
+        QApplication.processEvents()
+        QThread.msleep(150)
+        self.greed.doLive()
 
     def InitWindow(self):
         self.setWindowTitle(self.title)
@@ -47,8 +53,11 @@ class Window(QMainWindow):
             for i in range(shape[0]):
                 painter.drawLine(i * 10, 0, i * 10, self.height)
 
-        for i in range(shape[1]):
-            for j in range(shape[0]):
+        for i in range(shape[0]):
+            for j in range(shape[1]):
                 painter.drawLine(0, j * 10, self.width, j * 10)
+        
+        self.go()
+        
 
 

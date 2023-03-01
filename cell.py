@@ -3,10 +3,12 @@ from random import randint
 
 class Cell :
 
-    def __init__(self, isAlive = False) :
-        sighn = randint(0, 10)
+    def doRandom(self) :
+        sighn = randint(0, 8)
         if sighn != 0 :
             self.isAlive = False
         else :
             self.isAlive = True
         
+    def __init__(self, isAlive) :
+        self.isAlive = isAlive
