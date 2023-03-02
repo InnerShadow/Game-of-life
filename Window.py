@@ -23,7 +23,7 @@ class Window(QMainWindow):
     def go(self):
         self.update()
         QApplication.processEvents()
-        QThread.msleep(10)
+        QThread.msleep(30)
         self.greed.doLive()
 
     def InitWindow(self):
@@ -49,13 +49,11 @@ class Window(QMainWindow):
         
         painter.setPen(QtCore.Qt.black)
         painter.setBrush(QtCore.Qt.white)
-        for i in range(shape[1]):
-            for i in range(shape[0]):
-                painter.drawLine(i * 10, 0, i * 10, self.height)
-
         for i in range(shape[0]):
-            for j in range(shape[1]):
-                painter.drawLine(0, j * 10, self.width, j * 10)
+            painter.drawLine(i * 10, 0, i * 10, self.height)
+
+        for j in range(shape[1]):
+            painter.drawLine(0, j * 10, self.width, j * 10)
         
         self.go()
         

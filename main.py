@@ -17,6 +17,6 @@ def __main__() :
     window = Window.Window(_greed)
     sys.exit(App.exec())
 
-if __name__ == '__main__':
+if __name__ == '__main__' :
     __main__()
 
